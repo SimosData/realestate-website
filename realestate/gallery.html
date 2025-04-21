@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Dream Homes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            perspective: 1200px;
+            background: linear-gradient(135deg, #e0e7ef 0%, #b0c4de 100%);
+        }
+        .navbar {
+            box-shadow: 0 6px 24px rgba(0,0,0,0.18), 0 1.5px 0 #fff inset;
+            transform: translateZ(20px);
+            background: linear-gradient(90deg, #232526 0%, #414345 100%);
+        }
+        .navbar a {
+            text-shadow: 0 2px 8px #00c6fb, 0 0 2px #fff;
+            box-shadow: 0 2px 8px rgba(0,198,251,0.15);
+            border: 1px solid rgba(0,198,251,0.2);
+            background: rgba(255,255,255,0.07);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .navbar a:hover, .navbar a:focus {
+            transform: translateY(-4px) scale(1.08) rotateX(10deg);
+            box-shadow: 0 8px 24px #00c6fb, 0 0 8px #fff;
+        }
+        .hero {
+            box-shadow: 0 12px 40px rgba(0,120,215,0.18), 0 2px 0 #fff inset;
+            transform: rotateX(8deg) scale(1.01);
+            background: linear-gradient(120deg, #0078d7 0%, #00c6fb 100%);
+        }
+        .hero h1 {
+            text-shadow: 0 4px 16px #00c6fb, 0 0 8px #fff;
+            transform: perspective(400px) rotateY(-8deg);
+        }
+        .hero p {
+            text-shadow: 0 2px 8px #fff, 0 0 4px #00c6fb;
+            transform: perspective(400px) rotateY(6deg);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+            perspective: 900px;
+            margin: 2rem 0;
+        }
+        .gallery-item {
+            background: linear-gradient(120deg, #fff 60%, #e0e7ef 100%);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,120,215,0.13), 0 2px 0 #fff inset;
+            transform: rotateY(-6deg) scale(1.01);
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gallery-item:hover {
+            transform: rotateY(6deg) scale(1.07) translateY(-8px);
+            box-shadow: 0 16px 48px #00c6fb, 0 0 16px #fff;
+        }
+        .gallery-item img {
+            border-radius: 12px;
+            box-shadow: 0 4px 16px #00c6fb, 0 0 8px #fff;
+            width: 100%;
+            max-width: 240px;
+            transform: perspective(300px) rotateX(8deg);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery-item:hover img {
+            transform: perspective(300px) rotateX(0deg) scale(1.05);
+            box-shadow: 0 8px 32px #0078d7, 0 0 16px #fff;
+        }
+        footer {
+            box-shadow: 0 -4px 24px rgba(0,120,215,0.13);
+            background: linear-gradient(90deg, #232526 0%, #414345 100%);
+            color: #fff;
+            text-shadow: 0 2px 8px #00c6fb, 0 0 2px #fff;
+            border-radius: 12px 12px 0 0;
+        }
+        @media (max-width: 900px) {
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 0.5rem 0;
+            }
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            .gallery-item img {
+                max-width: 90vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="listings.html">Listings</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <header class="hero">
+        <h1>Gallery</h1>
+        <p>Explore our collection of futuristic and luxurious homes.</p>
+    </header>
+    <main>
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80" alt="Gallery 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=400&q=80" alt="Gallery 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=400&q=80" alt="Modern House">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=400&q=80" alt="Gallery 4">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519974719765-e6559eac2575?auto=format&fit=crop&w=400&q=80" alt="Modern Condo">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=400&q=80" alt="Suburban Home">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1430285561322-7808604715df?auto=format&fit=crop&w=400&q=80" alt="Luxury Mansion">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Luxury Apartment">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="City Building">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dream Homes. All rights reserved.</p>
+    </footer>
+</body>
+</html>
