@@ -151,6 +151,55 @@
             <p>&copy; 2024 Dream Homes. All rights reserved.</p>
         </footer>
     </div>
+    <div class="login-form">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div>
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" name="loginEmail" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    
+        <div class="registration-form">
+            <h2>Register</h2>
+            <form id="registrationForm">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <div class="appointment-form">
+            <h2>Book an Appointment</h2>
+            <form id="appointmentForm">
+                <div>
+                    <label for="appointmentDate">Date:</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+                </div>
+                <div>
+                    <label for="appointmentTime">Time:</label>
+                    <input type="time" id="appointmentTime" name="appointmentTime" required>
+                </div>
+                <div>
+                    <label for="service">Service:</label>
+                    <input type="text" id="service" name="service" required>
+                </div>
+                <button type="submit">Book Appointment</button>
+            </form>
+        </div>
+        <div id="appointments-section">
+        </div>
     <script>
         // Responsive Three.js 3D Card Spin & Glow
         let scene, camera, renderer, card, glow, animating = false, targetRotation = 0, currentRotation = 0;
@@ -254,4 +303,13 @@
         setupSpinEvents();
     </script>
 </body>
+<script src="auth.js"></script>
+<script>
+    const registrationForm = document.getElementById('registrationForm');
+    registrationForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent the default form submission
+        registerUser();
+    });
+</script>
+
 </html>
